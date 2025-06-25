@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriveX - Carros Disponíveis</title>
+  <link rel="stylesheet" href="carros.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+     <a href="./index.html">Drive<span>X</span></div></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="carros.html" class="active">Carros</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filtro" style="text-align:center; margin: 2rem 0;">
+      <input type="text" id="filtro-carros" placeholder="Buscar carro por nome..." />
+    </section>
+
+    <section class="grid-carro">
+      <div class="card-carro">
+        <img src="./img/ferrari.png" alt="Ferrari 488 Spider" />
+        <h3>Ferrari 488 Spider</h3>
+        <p>Carro esportivo de luxo com motor V8 turbo e design moderno.</p>
+        <strong>R$ 1.200.000</strong> 
+        <div class="botoes-card">
+  <button class="btn-encomenda" data-modelo="Ferrari 488 Spider">Encomendar</button>
+  <button class="btn-oferta" data-modelo="Ferrari 488 Spider">Fazer Oferta</button>
+</div>
+      </div>
+      <div class="card-carro">
+        <img src="./img/ChatGPT Image 19 de jun. de 2025, 23_14_08.png" alt="Mercedes C300" />
+        <h3>Mercedes C300</h3>
+        <p>sedã de luxo que se destaca pelo seu design, tecnologia e desempenho.</p>
+        <strong>R$ 350.000</strong>
+        <div class="botoes-card">
+  <button class="btn-encomenda" data-modelo="Mercedes C300">Encomendar</button>
+  <button class="btn-oferta" data-modelo="Mercedes C300">Fazer Oferta</button>
+</div>
+
+      </div>
+      <div class="card-carro">
+        <img src="./img/serie 3.png" alt="BMW Serie 3" />
+        <h3>BMW Serie 3</h3>
+        <p>Esportivo confiável com tradição e tecnologia.</p>
+        <strong>R$ 450.000</strong>
+       <div class="botoes-card">
+  <button class="btn-encomenda" data-modelo="BMW Serie 3">Comprar</button>
+  <button class="btn-oferta" data-modelo="BMW Serie 3">Fazer Oferta</button>
+</div>
+
+      </div>
+           <div class="card-carro">
+        <img src="./img/Porsche-911.jpg" alt="911" />
+        <h3>Porsche 911</h3>
+        <p> carro esportivo icônico, conhecido por seu design atemporal e desempenho notável.</p>
+        <strong>R$ 900.000</strong>
+       <div class="botoes-card">
+  <button class="btn-encomenda" data-modelo="NOME_DO_CARRO">Encomendar</button>
+  <button class="btn-oferta" data-modelo="NOME_DO_CARRO">Fazer Oferta</button>
+</div>
+
+      </div>
+              <div class="card-carro">
+        <img src="./img/nivus.jpg" alt="nivus" />
+        <h3>Nivus</h3>
+        <p> SUV compacto que se destaca pelo seu design cupê e tecnologia.</p>
+        <strong>R$ 120.000</strong>
+        <button class="btn-detalhes" data-modelo="nivus">Saiba mais</button>
+      </div>
+             <div class="card-carro">
+        <img src="./img/tiggo8pro.jpg" alt="tiggo8" />
+        <h3>Tiggo 8</h3>
+        <p> SUV de sete lugares com foco em tecnologia e espaço..</p>
+        <strong>R$ 200.000</strong>
+        <button class="btn-detalhes" data-modelo="tiggo8">Saiba mais</button>
+      </div>
+                <div class="card-carro">
+        <img src="./img/lamborghini.png" alt="aventador" />
+        <h3>Lamborghini Aventador</h3>
+        <p>carro esportivo de alta performance conhecido por seu design angular e agressivo, com linhas marcantes e detalhes aerodinâmicos.</p>
+        <strong>R$ 3.890.000,00</strong>
+        <button class="btn-detalhes" data-modelo="aventador">Saiba mais</button>
+      </div>
+                  <div class="card-carro">
+        <img src="./img/audirs7.png" alt="audirs7" />
+        <h3>Audi RS7</h3>
+        <p> sedan esportivo de alta performance que combina potência, tecnologia e design elegante.</p>
+        <strong>R$ 815.000</strong>
+        <button class="btn-detalhes" data-modelo="audirs7">Saiba mais</button>
+      </div>
+                   <div class="card-carro">
+        <img src="./img/g63.png" alt="g63" />
+        <h3>Mercedes-AMG G 63</h3>
+        <p> alta performance do icônico Classe G da Mercedes-Benz, conhecida por sua capacidade off-road e design robusto.</p>
+        <strong>R$ 1.650.000</strong>
+        <button class="btn-detalhes" data-modelo="g63">Saiba mais</button>
+      </div>
+      <!-- Adicione mais carros aqui -->
+    </section>
+
+    <!-- Modal para detalhes -->
+    <div id="modal-detalhes" class="modal">
+      <div class="modal-content">
+        <span id="fechar-modal" class="fechar"></span>
+        <h2 id="titulo-modal"></h2>
+        <img id="img-modal" src="" alt="" style="max-width:100%; border-radius: 10px; margin-bottom: 1rem;" />
+        <p id="descricao-modal"></p>
+        <strong id="preco-modal"></strong>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DriveX. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="carros.js"></script>
+</body>
+</html>

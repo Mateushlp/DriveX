@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DriveX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="./index.html">Drive<span>X</span></div></a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="carros.html">Carros</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Seu carro dos sonhos<br>está aqui</h1>
+      <p>Descubra os modelos mais desejados de carros de luxo e esportivos.</p>
+      <button onclick="scrollToCars(./carros.html)" class="btn-hero">
+        <a href="./carros.html"></a>Ver carros</button>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Encontre seu próximo carro</h2>
+    <p>Explore nossa coleção exclusiva de carros de luxo e esportivos. Encontre o modelo perfeito para você.</p>
+  </section>
+
+  <section id="carros" class="grid-carro">
+    <div class="card-carro">
+      <img src="./img/ferrari.png" alt="Ferrari 488 Spider" />
+      <h3>Ferrari 488 Spider</h3>
+      <p>A Ferrari 488 Spider é a definição de superesportivo de elite. Com motor V8 biturbo central-traseiro de 670 cv, entrega aceleração brutal e som envolvente. Seu design aerodinâmico e teto retrátil unem beleza e funcionalidade. Produzida em Maranello, representa o ápice da performance italiana com exclusividade, paixão e prestígio absoluto nas ruas e pistas.</p>
+      <strong>R$ 1.200.000</strong>
+      <button class="btn-detalhes" data-modelo="Ferrari 488 Spider">Saiba mais</button>
+    </div>
+
+    <div class="card-carro">
+      <img src="./img/ChatGPT Image 19 de jun. de 2025, 23_14_08.png" alt="Mercedes C300" />
+      <h3>Mercedes C300</h3>
+      <p>O Mercedes C 300 entrega luxo, conforto e performance em um sedã premium sofisticado. Com motor turbo e tração traseira, une condução suave com respostas vigorosas. O interior é tecnológico e elegante, com materiais nobres e sistemas inteligentes de assistência. É uma escolha ideal para quem valoriza status, requinte e uma condução refinada.</p>
+      <strong>R$ 350.000</strong>
+      <button class="btn-detalhes" data-modelo="Mercedes C300">Saiba mais</button>
+    </div>
+
+    <div class="card-carro">
+      <img src="./img/serie 3.png" alt="BMW serie 3" />
+      <h3>BMW serie 3</h3>
+      <p>O BMW Série 3 combina esportividade e sofisticação com precisão alemã. Reconhecido pelo prazer ao dirigir, traz tração traseira, direção direta e motores eficientes com ótimo desempenho. O acabamento interno é refinado e tecnológico, ideal tanto para executivos quanto para entusiastas. É um sedã que une luxo, resposta rápida e ótimo equilíbrio entre conforto e agilidade.</p>
+      <strong>R$ 450.000</strong>
+      <button class="btn-detalhes" data-modelo="BMW serie 3">Saiba mais</button>
+    </div>
+
+    <div class="card-carro">
+      <img src="./img/nivus.jpg" alt="Volkswagen Nivus" />
+      <h3>Volkswagen Nivus</h3>
+      <p>O Volkswagen Nivus é um SUV cupê compacto com design moderno e esportivo. Desenvolvido no Brasil, conquistou destaque pelo equilíbrio entre estilo, eficiência e tecnologia embarcada. Equipado com motor turbo e central multimídia VW Play, oferece dirigibilidade urbana com visual arrojado. Ideal para quem busca praticidade com um toque premium no dia a dia.</p>
+      <strong>R$ 120.000</strong>
+      <button class="btn-detalhes" data-modelo="nivus">Saiba mais</button>
+    </div>
+
+    <div class="card-carro">
+      <img src="./img/Porsche-911.jpg" alt="Porsche 911" />
+      <h3>Porsche 911</h3>
+      <p>O Porsche 911 é referência mundial em desempenho, engenharia e equilíbrio dinâmico. Com motor traseiro Boxer e aceleração impressionante, entrega experiência de pilotagem pura com conforto surpreendente para o uso diário. Símbolo de tradição e inovação, une design clássico, tecnologia de ponta e valor de revenda alto. Um carro que emociona em qualquer ocasião.</p>
+      <strong>R$ 120.000</strong>
+      <button class="btn-detalhes" data-modelo="911">Saiba mais</button>
+    </div>
+  </section>
+
+  <div id="modal-detalhes" class="modal">
+    <div class="modal-content">
+      <span id="fechar-modal" class="fechar">&times;</span>
+      <h2 id="titulo-modal"></h2>
+      <img id="img-modal" src="" alt="" style="max-width: 100%; border-radius: 10px; margin-bottom: 1rem;" />
+      <p id="descricao-modal"></p>
+      <strong id="preco-modal"></strong>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

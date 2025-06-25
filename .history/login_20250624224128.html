@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login DriveX</title>
+<style>
+  body { font-family: Arial, sans-serif; background:#111; color:#eee; display:flex; justify-content:center; align-items:center; height:100vh; }
+  form { background:#222; padding:20px; border-radius:8px; width: 300px; }
+  input, button { width: 100%; padding: 10px; margin-top: 10px; border-radius:4px; border:none; }
+  button { background:#f53340; color:#fff; cursor:pointer; }
+  a { color: #f53340; text-decoration:none; display:block; margin-top: 10px; text-align:center;}
+</style>
+</head>
+<body>
+
+<form id="formLogin">
+  <h2>Entrar</h2>
+  <input type="email" id="email" placeholder="Email" required />
+  <input type="password" id="senha" placeholder="Senha" required />
+  <button type="submit">Login</button>
+  <a href="cadastro.html">Criar uma conta</a>
+</form>
+
+<script>
+  const formLogin = document.getElementById('formLogin');
+
+  formLogin.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value.toLowerCase();
+    const senha = document.getElementById('senha').value;
+
+    const usuario = JSON.parse(localStorage.getItem('usuario_' + email));
+
+    if (!usuario) {
+      alert('Usuário não encontrado. Cadastre-se primeiro.');
+      return;
+    }
+
+    if (usuario.senha !== senha) {
+      alert('Senha incorreta.');
+      return;
+    }
+
+    // Salvar sessão
+    localStorage.setItem('usuarioLogado', email);
+    alert('Login realizado com sucesso!');
+    window.location.href = 'area-restrita.html';
+  });
+</script>
+
+</body>
+</html>
